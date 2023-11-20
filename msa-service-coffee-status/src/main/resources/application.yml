@@ -1,1 +1,22 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: msa-service-coffee-status
+
+  #Config Server
+  cloud:
+    config:
+      uri: http://localhost:8888
+      name: msa-architecture-config-server
+
+  config:
+    import: "optional:configserver:"
+
+#Eureka Client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9091/eureka/
 

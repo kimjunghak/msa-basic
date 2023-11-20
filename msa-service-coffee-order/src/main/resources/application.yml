@@ -2,3 +2,21 @@ spring:
   h2:
     console:
       path: '/console'
+
+  application:
+    name: msa-service-coffee-order
+
+  #Config Server
+  cloud:
+    config:
+      uri: http://localhost:8888
+      name: msa-architecture-config-server
+
+  config:
+    import: "optional:configserver:"
+
+#Eureka Client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9091/eureka/
