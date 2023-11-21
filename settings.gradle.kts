@@ -1,4 +1,4 @@
 rootProject.name = "msa-book"
-include("order")
-include("member")
-include("status")
+include("msa-service-coffee-order")
+include("msa-service-coffee-member")
+include("msa-service-coffee-status")
