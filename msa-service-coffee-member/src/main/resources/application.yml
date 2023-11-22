@@ -11,11 +11,6 @@ spring:
     name: msa-service-coffee-member
 
   #Config Server
-  cloud:
-    config:
-      uri: http://localhost:8888
-      name: msa-architecture-config-server
-
   config:
     import: "optional:configserver:"
 

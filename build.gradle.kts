@@ -55,6 +55,8 @@ subprojects {
         implementation("com.h2database:h2")
         implementation("org.springframework.kafka:spring-kafka")
 
+        implementation("com.github.ben-manes.caffeine:caffeine")
+
         // spring cloud
         implementation("org.springframework.boot:spring-boot-actuator")
         implementation("org.springframework.cloud:spring-cloud-starter-config")
@@ -71,4 +73,12 @@ subprojects {
 
 tasks.bootBuildImage {
     builder.set("paketobuildpacks/builder-jammy-base:latest")
+}
+
+tasks.bootJar {
+    enabled = false
+}
+
+tasks.jar {
+    enabled = true
 }
